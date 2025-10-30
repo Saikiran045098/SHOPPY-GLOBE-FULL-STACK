@@ -1,0 +1,46 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  font-family: "Poppins", sans-serif;
+}
+
+.error-code {
+  font-size: 8rem;
+  color: #ff4b2b;
+  margin: 0;
+  font-weight: 700;
+}
+
+.error-title {
+  font-size: 2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 15px 0 30px;
+  line-height: 1.6;
+}
+
+.home-button {
+  background-color: #ff4b2b;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #ff6a3d;
+  transform: scale(1.05);
+}

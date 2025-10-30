@@ -1,0 +1,134 @@
+.cart-container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  background: #fafafa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  font-family: "Poppins", sans-serif;
+}
+
+.cart-header {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1e40af;
+  margin-bottom: 2rem;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.2rem;
+  padding: 3rem 0;
+}
+
+.cart-summary {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.subtotal {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.checkout-btn {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, #1d4ed8, #1e3a8a);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cart-container {
+    padding: 1rem;
+    max-width: 75%;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  .cart-header{
+    margin-bottom: 1rem;
+  }
+  .checkout-btn {
+    width: 40%;
+    text-align: right;
+  }
+  .subtotal{
+    padding-right: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cart-container{
+     margin-bottom: 100px;
+  }
+  .checkout-btn{
+    width: 50%;
+    text-align: center;
+    
+  }
+  .subtotal{
+    padding-right: 25px;
+  }
+  .checkout-btn{
+    margin-right: 10px;
+  }
+  
+}
+@media (min-width: 375px) {
+  .cart-container {
+    width: 95%;
+    margin: 0.4rem auto;
+    margin-top: 50px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .cart-header {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .empty-cart {
+    font-size: 0.9rem;
+    padding: 1.5rem 0;
+  }
+
+  .cart-summary {
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+
+  .subtotal {
+    font-size: 0.95rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .checkout-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    width: 95%;
+    border-radius: 8px;
+    margin-top: 0.2rem;
+    text-align: center;
+  }
+
+  .checkout-btn:hover {
+    transform: scale(1.02);
+  }
+}
+
+

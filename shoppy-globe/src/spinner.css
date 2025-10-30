@@ -1,0 +1,36 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Center Spinner on Screen */
+.spinner-container {
+  position: fixed;
+  inset: 0;                      /* shorthand for top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.95); /* semi-transparent overlay */
+  z-index: 999999;               /* 🚨 higher than any other element */
+}
+
+/* The spinning circle */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #e5e7eb;
+  border-top: 6px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  backdrop-filter: blur(4px);
+
+}
+
+.spinner-text {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #374151;
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,143 @@
+/* Landing section styling */
+.landing-section {
+  background: linear-gradient(135deg, #0d6efd 0%, #2563eb 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 10%;
+  min-height: 90vh;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative overlay */
+.landing-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Main content layout */
+.landing-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Text content */
+.text-content {
+  flex: 1;
+  min-width: 320px;
+}
+
+.text-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  color: #f8fafc;
+}
+
+.text-content h1 span {
+  color: #ffd700;
+  text-shadow: 0 2px 6px rgba(255, 215, 0, 0.4);
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 35px;
+  max-width: 550px;
+}
+
+/* Button styling */
+.shop-now {
+  background: #ffffff;
+  color: #0d6efd;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.shop-now:hover {
+  background: #ffd700;
+  color: #0a0a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Image content */
+.image-content {
+  flex: 1;
+  min-width: 320px;
+  text-align: center;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 370px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-content img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* iPad Mini responsiveness */
+@media (max-width: 768px) {
+  .landing-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+    min-height: auto;
+  }
+
+  .landing-section::before {
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 250px;
+  }
+
+  .landing-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .landing-content h1,
+  .landing-content p {
+    max-width: 90%;
+  }
+
+  .shop-now {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}

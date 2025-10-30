@@ -1,0 +1,495 @@
+/* ===== Reset and Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+  margin-top: 40px;
+
+}
+
+/* ===== Page Layout ===== */
+.product-page {
+  width: 100%;
+  max-width: 1300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-top: 100px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Heading ===== */
+.product-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Search Bar ===== */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  max-width: 425px;
+  width: 90%;
+  position: sticky;
+   /* keep above any animations or reflows */
+}
+
+
+.search-bar:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  color: #334155;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  background-color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.clear-btn {
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e2e8f0;
+  color: #1e293b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-btn:hover {
+  background-color: #cbd5e1;
+}
+
+
+.product-list{
+   margin-top: 25px;
+   text-align: center;
+}
+.products {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 60px auto 40px;
+  color: #0d6efd; /* primary blue */
+  display: inline-block;
+  position: relative;
+}
+
+/* Gradient underline */
+.products::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 120px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6); /* professional gradient */
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+
+/* Hover effect for subtle interaction */
+.products:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Fade-in animation on page load */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.products {
+  animation: fadeInSlide 0.8s ease-in-out;
+}
+
+
+
+/* Search bar itself */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff; /* clean white background */
+  max-width: 500px;
+  width: 90%;
+  margin-left: 500px;
+}
+
+/* Input field styling */
+.search-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background-color: #ffffff;
+}
+
+/* Clear button styling */
+.clear-btn {
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #2563eb; /* blue button */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.clear-btn:hover {
+  background-color: #1e40af; /* darker blue on hover */
+}
+
+
+/* ===== Product Grid ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  gap: 15px;
+  padding-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+}
+
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Product Image ===== */
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #f8fafc;
+}
+
+/* ===== Product Info ===== */
+.product-info {
+  padding: 16px;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  height: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #059669;
+  font-weight: 600;
+}
+
+/* ===== Loading & Error ===== */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #e5e7eb;
+  border-top: 6px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  font-size: 1.1rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.error-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ef4444;
+  margin-top: 20px;
+}
+ .no-results {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;           
+  flex-direction: column;   
+  padding: 20px;           
+  font-family: "Poppins", sans-serif;
+  color: #d32f2f;           
+  font-size: 1.2rem;
+
+}
+
+
+/* Responsive: iPhone SE - Single product per row */
+@media (max-width: 375px) {
+  .product-page {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+  }
+
+  .search-bar {
+    margin: 0 auto;
+    justify-content: center;
+    width: 95%;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .clear-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* Force only 1 product per row */
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* single column */
+    gap: 20px;                  /* space between products */
+    padding: 15px 10px;
+    justify-items: center;       /* center the product card */
+  }
+
+  .product-card {
+    width: 100%;       /* take full width of the grid column */
+    max-width: 340px;  /* optional: prevent card from being too wide */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .product-info {
+    padding: 10px;
+  }
+
+  .product-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .product-desc {
+    font-size: 0.85rem;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .product-price {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #059669;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .product-page {
+  width: 100%;
+  max-width: 1300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+  .search-bar {
+    margin: 0 auto;            
+    justify-content: center;   
+    width: 90%;                /* full width within container */
+    max-width: 450px;          /* adjust for iPad view */
+  }
+
+  .search-input {
+    font-size: 15px;
+  }
+
+  .clear-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 18px;                             
+    padding: 25px 20px;                     
+    justify-items: center;                  
+  }
+
+  .product-card {
+    max-width: 320px;                       /* fits iPad Mini width nicely */
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .search-bar {
+    margin: 0 auto;            
+    justify-content: center;  
+    width: 90%;               
+    max-width: 450px;         
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row on laptops */
+    gap: 15px;
+    padding-top: 25px;
+    padding-bottom: 18px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-card {
+    max-width: 260px; /* ensure cards fit nicely */
+  }
+  .product-desc {
+    font-size: 0.85rem;
+    height: auto;
+    margin-bottom: 8px;
+    line-height: 1rem;
+  }
+}
+
+
+
+
+@media (max-width: 376px) {
+  .product-page {
+  width: 100%;
+  max-width: 1300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+  .search-bar {
+    margin: 0 auto;            
+    justify-content: center;   
+    width: 90%;                /* full width within container */
+    max-width: 450px;          /* adjust for iPad view */
+  }
+
+  .search-input {
+    font-size: 15px;
+  }
+
+  .clear-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);  
+    gap: 18px;                             
+    padding: 25px 20px;                     
+    justify-items: center;                  
+  }
+
+  .product-card {
+    max-width: 320px;                       /* fits iPad Mini width nicely */
+    border-radius: 10px;
+  }
+}

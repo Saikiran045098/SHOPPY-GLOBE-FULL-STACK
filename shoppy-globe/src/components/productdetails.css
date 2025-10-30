@@ -1,0 +1,384 @@
+/* Product detail container */
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 550px;
+  max-height: 750px;
+  margin: 40px auto;
+  margin-top: 75px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-detail-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Product image */
+.detail-image {
+  width: 50%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.detail-image:hover {
+  transform: scale(1.02);
+}
+
+/* Product info */
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.detail-title {
+  font-size: 1.6rem;
+  color: #1f1f1f;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.detail-info p {
+  font-size: 0.8rem;
+  color: #444;
+  line-height: 1.2;
+}
+
+.detail-info p strong {
+  color: #000;
+}
+
+/* Price */
+.detail-info .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Back button */
+.back-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Loading and error messages */
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 60px;
+}
+
+.error-container {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff2f2;
+  border: 1px solid #ffcccc;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 3px 12px rgba(255, 0, 0, 0.08);
+}
+
+.error-text {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+/* Product rating */
+.product-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #fef3c7;
+  color: #b45309;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 16px;
+  padding: 2px 8px;
+  margin-bottom: 6px;
+  width: fit-content;
+}
+
+.product-rating .stars {
+  font-size: 0.95rem;
+}
+
+.product-rating .rating-value {
+  margin-left: 2px;
+}
+
+.product-rating .rating-outof {
+  color: #92400e;
+  margin-left: 1px;
+  font-size: 0.8rem;
+}
+
+
+
+
+/* Responsive: iPad Mini */
+@media (min-width: 768px) {
+  .product-detail-container {
+    max-width: 60%;
+    margin: 20px auto;
+    padding: 10px 10px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-top: 60px;
+  }
+
+  .detail-image {
+    max-width: 70%;
+    height: 30%;
+    max-height: 150px;
+  }
+
+  .detail-info {
+    width: 90%;
+    align-items: center;
+  }
+  .detail-title {
+  font-size: 1.2rem;
+  color: #1f1f1f;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+  .detail-info p {
+    font-size: 0.85rem;
+    line-height: 1rem;
+  }
+
+  .detail-info .price {
+    font-size: 1.0rem;
+  }
+
+  .back-button {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    width: 100%;
+  }
+  .product-rating {
+    font-size: 0.85rem;
+  }
+  
+}
+
+
+/* Responsive: Laptop Devices */
+@media (min-width: 1024px) {
+  .product-detail-container {
+    max-width: 450px;
+    padding: 20px;
+    margin: 30px auto;
+    gap: 10px;
+    font-size: 0.65rem;
+    margin-top: 70px;
+  }
+
+  .detail-image {
+    max-height: 150px;
+  }
+
+  .detail-info {
+    gap: 10px;
+  }
+
+  .detail-title {
+    font-size: 1.2rem;
+  }
+
+  .detail-info p {
+    font-size: 0.65rem;
+    line-height: 1.0;
+  }
+
+  .detail-info .price {
+    font-size: 1.1rem;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+    padding: 7px 16px;
+  }
+
+  .product-rating {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  .product-rating .stars,
+  .product-rating .rating-outof {
+    font-size: 0.65rem;
+  }
+
+  .loading-text,
+  .error-text {
+    font-size: 1.1rem;
+    margin-top: 50px;
+  }
+
+  .error-container {
+    max-width: 450px;
+    padding: 25px;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width : 376px) {
+  .product-detail-container{
+    width: 80%;
+  }
+  /* Product image */
+.detail-image {
+  width: 50%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.detail-image:hover {
+  transform: scale(1.02);
+}
+
+/* Product info */
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.detail-title {
+  font-size: 0.8rem;
+  color: #1f1f1f;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.detail-info p {
+  font-size: 0.6rem;
+  color: #444;
+  line-height: 1.2;
+}
+
+.detail-info p strong {
+  color: #000;
+}
+
+/* Price */
+.detail-info .price {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Back button */
+.back-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.70rem;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Loading and error messages */
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 60px;
+}
+
+.error-container {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff2f2;
+  border: 1px solid #ffcccc;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 3px 12px rgba(255, 0, 0, 0.08);
+}
+
+.error-text {
+  color: #d32f2f;
+  font-weight: 500;
+}
+.rating{
+ 
+  font-size: 0.7rem;
+}
+.product-rating{
+  font-size: 0.4rem;
+}
+/* Product rating */
+.product-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #fef3c7;
+  color: #b45309;
+  font-weight: 600;
+  font-size: 0.60rem;
+  border-radius: 16px;
+  padding: 2px 8px;
+  margin-bottom: 6px;
+  width: fit-content;
+}
+
+.product-rating .stars {
+  font-size: 0.70rem;
+}
+
+.product-rating .rating-value {
+  margin-left: 2px;
+}
+
+.product-rating .rating-outof {
+  color: #92400e;
+  margin-left: 1px;
+  font-size: 0.6rem;
+}
+
+
+}

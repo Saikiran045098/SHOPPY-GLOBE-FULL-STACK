@@ -1,0 +1,262 @@
+/* ============================
+   NAVBAR BASE STYLING
+============================ */
+.navbar {
+  background-color: #0d6efd;
+  padding: 15px 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Add space below navbar */
+body > .content,
+.product-page {
+  margin-top: 100px;
+}
+
+/* ============================
+   LOGO
+============================ */
+.logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-right: 350px;
+}
+
+/* ============================
+   NAV LINKS (DESKTOP)
+============================ */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #dbeafe;
+  transform: translateY(-2px);
+}
+
+.nav-links .active {
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
+}
+
+/* ============================
+   CART ICON
+============================ */
+.nav-links .cart-icon {
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-links .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #ff4d4d;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================
+   RESPONSIVENESS
+============================ */
+
+/* iPad Mini */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* logo left, links spread */
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    padding-right: 75px; /* remove large padding */
+    flex: 0 0 auto; /* keep logo fixed to left */
+    font-size: 1.2rem;
+  }
+
+  .navbar-container {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* center nav links */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 30px; /* evenly spaced links */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Laptop */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .navbar {
+    justify-content: center;
+  }
+  .nav-links {
+    gap: 40px;
+  }
+  .logo {
+    padding-right: 200px;
+  }
+}
+
+/* iPhone SE (small phones) */
+@media (max-width: 376px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 15px;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    padding-right: 50px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .nav-links .cart-icon {
+    font-size: 1.3rem;
+  }
+
+  .nav-links .cart-count {
+    top: -5px;
+    right: -8px;
+    font-size: 0.7rem;
+  }
+
+  body > .content,
+  .product-page {
+    margin-top: 140px; /* Prevent overlap */
+  }
+}
+
+/* ============================
+   HAMBURGER MENU (NEW)
+============================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  z-index: 1100;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Transform to 'X' when open */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ============================
+   MOBILE NAVIGATION (DROPDOWN)
+============================ */
+@media (max-width: 376px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px; /* matches navbar height */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #0d6efd;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    
+  }
+
+ 
+}

@@ -1,0 +1,172 @@
+/* ======= Footer Base ======= */
+.footer {
+  background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 60px 40px 20px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ======= Footer Container ======= */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 40px;
+}
+
+/* ======= Footer Sections ======= */
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Brand Section */
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffe600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-desc {
+  color: #f2f2f2;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+/* Quick Links */
+.footer-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #ffe600;
+  border-radius: 1px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #eaeaea;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+  color: #ffe600;
+  padding-left: 5px;
+}
+
+/* Contact Section */
+.footer-section.contact p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #f1f1f1;
+}
+
+.footer-section.contact p::before {
+  content: "";
+  margin-right: 5px;
+}
+
+/* ======= Footer Bottom ======= */
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  font-size: 0.9rem;
+  color: #ddd;
+  letter-spacing: 0.3px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* ======= Hover Animations ======= */
+.footer-logo:hover {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  text-shadow: 0 0 5px rgba(255, 230, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 25px 20px; /* slightly smaller padding */
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .footer-section {
+    min-width: 100%;
+    max-width: 500px; /* prevent too-wide sections */
+  }
+
+  .footer-logo {
+    justify-content: center;
+    font-size: 1.8rem;
+  }
+
+  .footer-desc {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-section ul li a {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+    padding-top: 20px;
+  }
+}
+
+
