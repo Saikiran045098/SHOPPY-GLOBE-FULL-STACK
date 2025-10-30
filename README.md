@@ -238,46 +238,46 @@ _Add screenshots of your app’s pages here (Home, Login, Cart, Checkout, etc.)_
 
 ○ GET /products: Fetch a list of products from MongoDB.
 
-   GET /products  : ![alt text](image.png)
+   GET /products  : ![alt text](/shoppy-globe/src/screenshots/image.png)
 
-   Database : ![alt text](image-2.png)
+   Database : ![alt text](/shoppy-globe/src/screenshots/image-2.png)
 
-   GET /products/id : ![alt text](image-1.png)
+   GET /products/id : ![alt text](/shoppy-globe/src/screenshots/image-1.png)
 
 
 
 ○ POST /register: Register a new user
 
- new registeruser : ![alt text](image-3.png)
+ new registeruser : ![alt text](/shoppy-globe/src/screenshots/image-3.png)
 
- new register errors : ![alt text](image-4.png)
+ new register errors : ![alt text](/shoppy-globe/src/screenshots/image-4.png)
 
-new user database : ![alt text](image-7.png)
+new user database : ![alt text](/shoppy-globe/src/screenshots/image-7.png)
 
  ○ POST /login: Authenticate user and return a JWT token
 
- login : ![alt text](image-5.png)
+ login : ![alt text](/shoppy-globe/src/screenshots/image-5.png)
  
-login error : ![alt text](image-6.png)
+login error : ![alt text](/shoppy-globe/src/screenshots/image-6.png)
 
 
 ○ POST /cart: Add a product to the shopping cart.
 
- sucessfull cart : ![alt text](image-8.png)
+ sucessfull cart : ![alt text](/shoppy-globe/src/screenshots/image-8.png)
 
-database : ![alt text](image-9.png)
+database : ![alt text](/shoppy-globe/src/screenshots/image-9.png)
 
 PUT /cart/: Update the quantity of a product in the cart.
 
- successful PUT cart : ![alt text](image-10.png)
+ successful PUT cart : ![alt text](/shoppy-globe/src/screenshots/image-10.png)
 
-database : ![alt text](image-11.png)
+database : ![alt text](/shoppy-globe/src/screenshots/image-11.png)
 
 DELETE /cart/ : Remove a product from the cart.
 
-sucessful Delete cart : ![alt text](image-12.png)
+sucessful Delete cart : ![alt text](/shoppy-globe/src/screenshots/image-12.png)
 
-database : ![alt text](image-13.png)
+database : ![alt text](/shoppy-globe/src/screenshots/image-13.png)
    
 ---
 
